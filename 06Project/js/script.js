@@ -1,14 +1,14 @@
 // This is the code for the imagesslider in the project
 
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll(".slide");
 let slideIndex = 0;
 let intervalId = null;
 
-document.addEventListener('DOMContentLoaded', initializeSlider);
+document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider() {
   if (slides.length > 0) {
-    slides[slideIndex].classList.add('displaySlide');
+    slides[slideIndex].classList.add("displaySlide");
     intervalId = setInterval(nextSlide, 5000);
   }
 }
@@ -20,10 +20,10 @@ function showSlides(index) {
     slideIndex = slides.length - 1;
   }
 
-  slides.forEach(slide => {
-    slide.classList.remove('displaySlide');
+  slides.forEach((slide) => {
+    slide.classList.remove("displaySlide");
   });
-  slides[slideIndex].classList.add('displaySlide');
+  slides[slideIndex].classList.add("displaySlide");
 }
 
 function prevSlide() {
